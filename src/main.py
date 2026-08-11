@@ -27,7 +27,10 @@ def main():
 
         file_path = save_parquet(df, table)
 
-        upload_file(file_path)
+        try:
+            upload_file(file_path)
+        except Exception as e:
+            print(f"[aviso] upload para S3 falhou ({e}). Arquivo local mantido em: {file_path}")
 
     print("=" * 60)
     print("PROCESSO FINALIZADO")

@@ -231,3 +231,9 @@ logs/*.log
 # Dados gerados pelo pipeline
 data/**/*.parquet
 data/**/*.csv
+credentials/
+
+*.json
+
+# Variaveis de ambiente e credenciais
+.env
